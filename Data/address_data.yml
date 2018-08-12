@@ -1,0 +1,20 @@
+add_address:
+  test_address_001:
+    name: "李四"
+    phone: "18611111111"
+    address: "清河三街92号"
+    post: "100080"
+  test_address_002:
+    name: "王五"
+    phone: "18622222222"
+    address: "帽儿胡同16号"
+    post: ""
+edit_address:
+  test_edit_001:
+    name: "赵六"
+    phone: "18666666666"
+    province: "广东省"
+    city: "深圳市"
+    area: "宝安区"
+    detail_address: "中粮商务公园"
+    expect_toast: "保存成功"

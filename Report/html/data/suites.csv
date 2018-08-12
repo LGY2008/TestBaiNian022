@@ -1,0 +1,4 @@
+"Status","Name","Duration in ms","Description"
+"passed","test_search.TestSearch.test_click_search_btn[*&^%]","10862",""
+"passed","test_search.TestSearch.test_click_search_btn[1234]","10794",""
+"passed","test_search.TestSearch.test_click_search_btn[\u4f60\u597d]","24641",""
