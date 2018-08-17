@@ -96,7 +96,7 @@ class TestAddress():
             assert self.pageSet.page_if_address_list()
             allure.attach("删除描述","删除地址成功！")
         except:
-            # 截图
+            # 截图  
             self.pageSet.base_get_screen_shot()
             allure.attach("删除地址","删除地址失败！")
             raise
