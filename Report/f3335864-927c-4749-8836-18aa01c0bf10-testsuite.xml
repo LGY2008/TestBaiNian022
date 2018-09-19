@@ -1,0 +1,187 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1537343866035" stop="1537343962263">
+  <name>test_address</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1537343866035" status="passed" stop="1537343922615">
+      <name>TestAddress.test_add_address[\u674e\u56db-18611111111-\u6e05\u6cb3\u4e09\u885792\u53f7-100080]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="6700-MainThread"/>
+        <label name="host" value="MS-20180906QJYH"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1537343903973" status="passed" stop="1537343922614">
+          <name>添加地址方法</name>
+          <title>添加地址方法</title>
+          <attachments>
+            <attachment source="b2b696e9-354b-43b0-bd17-ba1c7e3c2e87-attachment.txt" title="描述" type="text/plain"/>
+          </attachments>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1537343922619" status="passed" stop="1537343938934">
+      <name>TestAddress.test_add_address[\u738b\u4e94-18622222222-\u5e3d\u513f\u80e1\u540c16\u53f7-]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="6700-MainThread"/>
+        <label name="host" value="MS-20180906QJYH"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1537343922622" status="passed" stop="1537343938934">
+          <name>添加地址方法</name>
+          <title>添加地址方法</title>
+          <attachments>
+            <attachment source="67fa184c-e5dc-4550-b620-9b2d3649b705-attachment.txt" title="描述" type="text/plain"/>
+          </attachments>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1537343938938" status="failed" stop="1537343956774">
+      <name>TestAddress.test_modifi_address[\u8d75\u516d-18666666666-\u5e7f\u4e1c\u7701-\u6df1\u5733\u5e02-\u5b9d\u5b89\u533a-\u4e2d\u7cae\u5546\u52a1\u516c\u56ed-\u4fdd\u5b58\u6210\u529f]</name>
+      <failure>
+        <message>TimeoutException: Message: 
+</message>
+        <stack-trace>self = &lt;test_address.TestAddress object at 0x035A2190&gt;, name = '赵六'
+phone = '18666666666', province = '广东省', city = '深圳市', area = '宝安区'
+detail_address = '中粮商务公园', expect_toast = '保存成功'
+
+    @allure.step("修改地址方法")
+    @pytest.mark.run(order=2)
+    @pytest.mark.parametrize("name,phone,province,city,area,detail_address,expect_toast",get_data("edit"))
+    def test_modifi_address(self,name,phone,province,city,area,detail_address,expect_toast):
+        # 点击编辑
+        self.pageSet.page_click_edit_btn()
+        # 点击修改
+&gt;       self.pageSet.page_click_edit_modify( name, phone, province, city, area, detail_address )
+
+Scripts\test_address.py:77: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Page\page_setting.py:63: in page_click_edit_modify
+    self.base_click_element(Page.address_add_default)
+Base\base_init.py:20: in base_click_element
+    self.find_element(loc).click()
+Base\base_init.py:11: in find_element
+    return WebDriverWait( self.driver, timeout, poll ).until( lambda x: x.find_element( *loc ) )
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="4c27a7a9-bbec-45c5-b8e9-e27620de1a5c")&gt;
+method = &lt;function BaseInit.find_element.&lt;locals&gt;.&lt;lambda&gt; at 0x035908E8&gt;
+message = ''
+
+    def until(self, method, message=''):
+        """Calls the method provided with the driver as an argument until the \
+            return value is not False."""
+        screen = None
+        stacktrace = None
+    
+        end_time = time.time() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, 'screen', None)
+                stacktrace = getattr(exc, 'stacktrace', None)
+            time.sleep(self._poll)
+            if time.time() &gt; end_time:
+                break
+&gt;       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message:
+
+c:\users\administrator\appdata\local\programs\python\python36-32\lib\site-packages\selenium\webdriver\support\wait.py:80: TimeoutException</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="6700-MainThread"/>
+        <label name="host" value="MS-20180906QJYH"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1537343938942" status="failed" stop="1537343956551">
+          <name>修改地址方法</name>
+          <title>修改地址方法</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1537343956793" status="failed" stop="1537343962263">
+      <name>TestAddress.test_delete_address</name>
+      <failure>
+        <message>TimeoutException: Message: 
+</message>
+        <stack-trace>self = &lt;test_address.TestAddress object at 0x038BD970&gt;
+
+    @pytest.mark.run(order=3)
+    @allure.step("删除地址")
+    def test_delete_address(self):
+        # 调用删除方法
+&gt;       self.pageSet.page_delete_address()
+
+Scripts\test_address.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Page\page_setting.py:116: in page_delete_address
+    self.page_click_edit_delete()
+Page\page_setting.py:69: in page_click_edit_delete
+    els=self.find_elements(Page.address_get_address_list)
+Base\base_init.py:14: in find_elements
+    return WebDriverWait( self.driver, timeout, poll ).until( lambda x: x.find_elements( *loc ) )
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="4c27a7a9-bbec-45c5-b8e9-e27620de1a5c")&gt;
+method = &lt;function BaseInit.find_elements.&lt;locals&gt;.&lt;lambda&gt; at 0x038CF150&gt;
+message = ''
+
+    def until(self, method, message=''):
+        """Calls the method provided with the driver as an argument until the \
+            return value is not False."""
+        screen = None
+        stacktrace = None
+    
+        end_time = time.time() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, 'screen', None)
+                stacktrace = getattr(exc, 'stacktrace', None)
+            time.sleep(self._poll)
+            if time.time() &gt; end_time:
+                break
+&gt;       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message:
+
+c:\users\administrator\appdata\local\programs\python\python36-32\lib\site-packages\selenium\webdriver\support\wait.py:80: TimeoutException</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="6700-MainThread"/>
+        <label name="host" value="MS-20180906QJYH"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1537343956794" status="failed" stop="1537343962215">
+          <name>删除地址</name>
+          <title>删除地址</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

@@ -45,7 +45,7 @@ class PageSetting(BaseInit):
         # 获取修改列表
         els=self.find_elements(Page.address_edit_modify)
         # 点击修改 默认修改列表第一个
-        self.base_click(els,num=1)
+        self.base_click(els,num=0)
         # 修改姓名
         self.base_input_text(Page.address_receipt_name,name)
         # 修改电话
