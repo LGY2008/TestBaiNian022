@@ -1,0 +1,154 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1537413198624" stop="1537413415257">
+  <name>test_login</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1537413198624" status="failed" stop="1537413282020">
+      <name>TestBai.test_login[18610453007-123456-itheima-None-None]</name>
+      <failure>
+        <message>TimeoutException: Message: 
+</message>
+        <stack-trace>self = &lt;test_login.TestBai object at 0x03549CD0&gt;, username = '18610453007'
+password = '123456', expect = 'itheima', expect_toast = None, message = None
+
+    @pytest.mark.parametrize("username,password,expect,expect_toast,message",get_login_data())
+    def test_login(self,username,password,expect,expect_toast,message):
+        if expect:
+            try:
+                # 登录
+                self.page.page_input_username_pwd( username, password )
+                # 断言登录成功 Nickname
+&gt;               assert expect in self.page.page_get_login_nickname()
+
+Scripts\test_login.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Page\page_bainian.py:32: in page_get_login_nickname
+    return self.base_get_text(Page.set_nick_name)
+Base\base_init.py:36: in base_get_text
+    return self.find_element(loc).text
+Base\base_init.py:11: in find_element
+    return WebDriverWait( self.driver, timeout, poll ).until( lambda x: x.find_element( *loc ) )
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="74787c82-a10f-49d0-b49e-b10f0191d365")&gt;
+method = &lt;function BaseInit.find_element.&lt;locals&gt;.&lt;lambda&gt; at 0x02AD6780&gt;
+message = ''
+
+    def until(self, method, message=''):
+        """Calls the method provided with the driver as an argument until the \
+            return value is not False."""
+        screen = None
+        stacktrace = None
+    
+        end_time = time.time() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, 'screen', None)
+                stacktrace = getattr(exc, 'stacktrace', None)
+            time.sleep(self._poll)
+            if time.time() &gt; end_time:
+                break
+&gt;       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message:
+
+c:\users\administrator\appdata\local\programs\python\python36-32\lib\site-packages\selenium\webdriver\support\wait.py:80: TimeoutException</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="7192-MainThread"/>
+        <label name="host" value="MS-20180906QJYH"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1537413282092" status="passed" stop="1537413314919">
+      <name>TestBai.test_login[itheima-123456-itheima-None-None]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="7192-MainThread"/>
+        <label name="host" value="MS-20180906QJYH"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1537413314921" status="passed" stop="1537413348237">
+      <name>TestBai.test_login[ 18610453007 -123456-itheima-None-None]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="7192-MainThread"/>
+        <label name="host" value="MS-20180906QJYH"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1537413348241" status="passed" stop="1537413382477">
+      <name>TestBai.test_login[ itheima -123456-itheima-None-None]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="7192-MainThread"/>
+        <label name="host" value="MS-20180906QJYH"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1537413382481" status="passed" stop="1537413390048">
+      <name>TestBai.test_login[18610453007-111111-None-\u767b\u5f55\u5bc6\u7801\u9519\u8bef-\u767b\u5f55\u5bc6\u7801\u9519\u8bef]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="7192-MainThread"/>
+        <label name="host" value="MS-20180906QJYH"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1537413390050" status="passed" stop="1537413398184">
+      <name>TestBai.test_login[186104530077-123456-None-\u6b64\u7528\u6237\u4e0d\u5b58\u5728-\u6b64\u7528\u6237\u4e0d\u5b58\u5728]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="7192-MainThread"/>
+        <label name="host" value="MS-20180906QJYH"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1537413398187" status="passed" stop="1537413406675">
+      <name>TestBai.test_login[itheimaa-123456-None-\u6b64\u7528\u6237\u4e0d\u5b58\u5728-\u6b64\u7528\u6237\u4e0d\u5b58\u5728]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="7192-MainThread"/>
+        <label name="host" value="MS-20180906QJYH"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1537413406677" status="passed" stop="1537413415257">
+      <name>TestBai.test_login[itheima-123444-None-\u767b\u5f55\u5bc6\u7801\u9519\u8bef-\u767b\u5f55\u5bc6\u7801\u9519\u8bef]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="7192-MainThread"/>
+        <label name="host" value="MS-20180906QJYH"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>
