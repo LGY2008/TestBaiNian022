@@ -61,7 +61,7 @@ class TestBai():
                 assert msg in expect_toast
             except:
                 self.page.base_get_screen_shot()
-                raise
+                raise   
 
 
 
